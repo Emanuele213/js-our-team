@@ -51,10 +51,8 @@ for (let i = 0; i < objArrWorker.length; i++) {
     const eleImg = document.createElement('div');
     const eleName = document.createElement('div');
     const eleWorker = document.createElement('div');
-    const img = document.createElement('img');
     eleContainer.append(eleDiv);
-    eleDiv.append(eleImg);
-    eleImg.append(img);
+    eleDiv.append(eleImg);    
     eleDiv.append(eleDivName)
     eleDivName.append(eleName);
     eleDivName.append(eleWorker);
@@ -63,11 +61,9 @@ for (let i = 0; i < objArrWorker.length; i++) {
     eleWorker.classList.add('mod-worker');
     eleDiv.classList.add('card');
     eleImg.classList.add('card-img')
-    img.classList.add('img-size');
     
+    eleImg.innerHTML += `<img class='img-size' src='${objArrWorker[i].img}'>`;
     eleName.innerHTML = `${objArrWorker[i].name} ${objArrWorker[i].lastName}`;
     eleWorker.innerHTML = `${objArrWorker[i].employed}`;
-    // eleDiv.append(`${objArrWorker[i].name}${objArrWorker[i].lastName}`);
-    // eleDiv.append(`${objArrWorker[i].employed}`);
-    img.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
+    //img.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
 }
