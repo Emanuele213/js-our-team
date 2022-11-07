@@ -39,7 +39,7 @@ const objArrWorker = [
         name: 'Barbara',
         lastName: 'Ramos',
         employed: 'Graphic Designer',
-        img: 'barbara-ramos-graphic-designer.jpg',
+        img: 'img/barbara-ramos-graphic-designer.jpg',
     },
 ];
 
@@ -47,7 +47,12 @@ console.table(objArrWorker);
 
 for (let i = 0; i < objArrWorker.length; i++) {
     const eleDiv = document.createElement('div');
+    const eleImg = document.createElement('img');
+    eleContainer.append(eleImg);
     eleContainer.append(eleDiv);
+    
     eleDiv.classList.add('mod-worker');
-    eleDiv.append(`Worker ${i}: ${objArrWorker[i].name}  ${objArrWorker[i].lastName}  ${objArrWorker[i].employed}  ${objArrWorker[i].img}`);
+    eleDiv.append(`Worker ${i}: ${objArrWorker[i].name}  ${objArrWorker[i].lastName}  ${objArrWorker[i].employed}`);
+    eleImg.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
+    eleImg.setAttribute("src", "img/angela-caroll-chief-editor.jpg");
 }
