@@ -1,3 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 33%;
+    margin: 1rem 0;
+}
+
+.card-img {
+    display: flex;
+    height: 100%;
+    margin: auto;
+}
+
+.img-size {
+    width: 300px;
+}
+
+.bg-grey {
+    background-color: lightgrey;
+    width: 300px;
+    height: 4rem;
+}
+
+.mod-name {
+    font-size: 1.5rem;
+}
+
 .mod-worker {
-    font-size: 2rem;
+    font-size: 1rem;
 }

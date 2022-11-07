@@ -17,7 +17,7 @@ const objArrWorker = [
     {
         name: 'Walter',
         lastName: 'Gordonela',
-        employed: 'COffice Manager',
+        employed: 'Coffice Manager',
         img: 'img/walter-gordon-office-manager.jpg',
     },
 
@@ -47,12 +47,27 @@ console.table(objArrWorker);
 
 for (let i = 0; i < objArrWorker.length; i++) {
     const eleDiv = document.createElement('div');
-    const eleImg = document.createElement('img');
-    eleContainer.append(eleImg);
+    const eleDivName = document.createElement('div');
+    const eleImg = document.createElement('div');
+    const eleName = document.createElement('div');
+    const eleWorker = document.createElement('div');
+    const img = document.createElement('img');
     eleContainer.append(eleDiv);
+    eleDiv.append(eleImg);
+    eleImg.append(img);
+    eleDiv.append(eleDivName)
+    eleDivName.append(eleName);
+    eleDivName.append(eleWorker);
+    eleDivName.classList.add('bg-grey');
+    eleName.classList.add('mod-name');
+    eleWorker.classList.add('mod-worker');
+    eleDiv.classList.add('card');
+    eleImg.classList.add('card-img')
+    img.classList.add('img-size');
     
-    eleDiv.classList.add('mod-worker');
-    eleDiv.append(`Worker ${i}: ${objArrWorker[i].name}  ${objArrWorker[i].lastName}  ${objArrWorker[i].employed}`);
-    eleImg.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
-    eleImg.setAttribute("src", "img/angela-caroll-chief-editor.jpg");
+    eleName.innerHTML = `${objArrWorker[i].name} ${objArrWorker[i].lastName}`;
+    eleWorker.innerHTML = `${objArrWorker[i].employed}`;
+    // eleDiv.append(`${objArrWorker[i].name}${objArrWorker[i].lastName}`);
+    // eleDiv.append(`${objArrWorker[i].employed}`);
+    img.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
 }
